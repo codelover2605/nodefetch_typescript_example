@@ -16,7 +16,7 @@ export module ServiceWrapper {
 
                 let response = await fetch(url, {
                     method: request.method,
-                    body: request.body,
+                    body: JSON.stringify(request.body),
                     headers: request.headers
                 });
 
@@ -24,7 +24,7 @@ export module ServiceWrapper {
                     throw new Error(response.statusText);
                 }
 
-                let data = await response.json()
+                let data = await response.json();
                 resolve(data as T);
             } catch (error) {
                 reject(error);
