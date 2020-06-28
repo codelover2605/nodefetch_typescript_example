@@ -19,3 +19,10 @@ Typescript Example to automate rest services using node-fetch and Jest.
 
 ### __tests__
 Tests Specifications
+
+### Steps to run the test
+- Install all dependencies: 
+npm i
+
+- Run the tests:
+npm run start
